@@ -66,7 +66,7 @@ const PaymentHistory = () => {
       },
       {
         name: 'Account Number',
-           selector: (row) => row.activationDate
+           selector: (row) => data.activationDate
 
   
       },
@@ -137,17 +137,18 @@ const PaymentHistory = () => {
     };
   
     return (
-   
+      <div className='home'>
+      <Sidebar />
+      
         <div className='customerprofile'>
-        <Sidebar />
+        
         <div className="homeContainer">
         {/* <Topbar/> */}
-        
-
-      </div>
         <div className="customerprofileContainer">
+          
         <div className="top">
           <div className="topup">
+            
           {/* <div className="widgets"> */}
           
         {/* </div> */}
@@ -164,6 +165,7 @@ const PaymentHistory = () => {
             {/* <span className='customername'>{user.displayName}</span> */}
 
           </div>
+          
           <div className="topbottom">
             <span >Customer data </span>
             
@@ -178,7 +180,11 @@ const PaymentHistory = () => {
             
             
           </div>
-          
+          <div className="widgets">
+          <Widget />
+          <Widget />
+          <Widget />
+        </div>
           
           <hr className='topline' />
         </div>  
@@ -210,8 +216,11 @@ const PaymentHistory = () => {
   
       </div>
       </div>
+
       </div>
-     
+       
+      </div>
+     </div>
     )
   
 }
