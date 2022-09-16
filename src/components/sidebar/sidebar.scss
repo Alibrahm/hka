@@ -1,0 +1,111 @@
+.sidebar {
+    flex: 1;
+    border-right: 0.5px solid rgb(230, 227, 227);
+    min-height: 100vh;
+    background-color: #000029;
+    border-radius: 10px;
+    font-style: Ubuntu;
+
+    .top {
+        display: flex;
+        border-top-right-radius: 10px;
+        margin-bottom: 10px;
+        background-color: #000035;
+        height: 90px;
+        align-items: center;
+        justify-content: flex-start;
+
+
+        img {
+            display: flex;
+            align-self: center;
+            margin-right: 30px;
+            width: 134px;
+            // height: 90px;
+        }
+
+    }
+
+    .center {
+        padding-left: 10px;
+        height: 70%;
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            margin-bottom: 30px;
+
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            h5 {
+                font-size: 11px;
+                line-height: 16px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                /* identical to box height */
+
+
+                color: #FFFFFF;
+            }
+        }
+
+
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-top: 5px;
+
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer;
+                margin-bottom: 20px;
+
+
+                .icon {
+
+                    font-size: 18px;
+                    color: #6E7882;
+                }
+
+            }
+
+            li span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.01em;
+                color: rgba(255, 255, 255, 0.93);
+                margin-left: 30px;
+
+            }
+
+            li :active {
+                color: #F58426;
+            }
+
+            hr {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333;
+                /* old IE */
+                background-color: #333;
+                /* Modern Browsers */
+            }
+        }
+    }
+}
