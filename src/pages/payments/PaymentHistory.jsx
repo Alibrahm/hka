@@ -26,7 +26,7 @@ const PaymentHistory = () => {
   
     const getCustomers = async () => {
       try {
-        const response = await axios.get('https://hsu36wspzq.eu-west-1.awsapprunner.com/fineract-provider/api/v1/loans/2?associations=all&exclude=guarantors,futureSchedule', {
+        const response = await axios.get('https://hsu36wspzq.eu-west-1.awsapprunner.com/fineract-provider/api/v1/loans/27?associations=all&exclude=guarantors,futureSchedule', {
           headers: {
             'fineract-platform-tenantid': 'default',
             'Authorization': 'Basic bWlmb3M6OUtxeSZzcDgmRCFp'
@@ -35,7 +35,7 @@ const PaymentHistory = () => {
         })
         
         // setTransactions(response.data.transactions)
-        setTransactions(response)
+        setTransactions(response.data)
         console.log(response)
 
         //setTransactions(response.data)
@@ -66,7 +66,7 @@ const PaymentHistory = () => {
       },
       {
         name: 'Account Number',
-           selector: (row) => data.activationDate
+           selector: (row) => data.accountNo
 
   
       },
@@ -83,7 +83,7 @@ const PaymentHistory = () => {
     
       {
         name: 'Loan Type',
-        selector: (row) => row.type.value
+        selector: (row) => data.loanType
   
   
       },

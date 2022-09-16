@@ -55,7 +55,7 @@ const Datatable = () => {
     },
     {
       name: 'Phone Number',
-      selector: (row) => row.externalId
+      selector: (row) => row.mobileNo
 
     },
     {
